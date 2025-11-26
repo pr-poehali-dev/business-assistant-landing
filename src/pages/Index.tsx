@@ -166,7 +166,65 @@ const Index = () => {
       </section>
 
       <section className="px-4 py-24 bg-card">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
+              Отзывы клиентов
+            </h2>
+            <p className="text-[#6A6A6A] text-xl">
+              Что говорят те, кто уже использует ассистента
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+            {[
+              {
+                name: "Алексей Морозов",
+                role: "Владелец интернет-магазина",
+                text: "Ассистент полностью автоматизировал общение с клиентами. Теперь не теряю заявки по ночам, а продажи выросли на 40%. За 490₽ это просто находка!",
+                rating: 5
+              },
+              {
+                name: "Мария Соколова",
+                role: "Руководитель SMM-агентства",
+                text: "Создание контента стало в разы быстрее. Ассистент помогает с текстами, идеями и планированием. Экономлю минимум 10 часов в неделю. Рекомендую всем!",
+                rating: 5
+              },
+              {
+                name: "Дмитрий Волков",
+                role: "Владелец сети кофеен",
+                text: "Настроил за 5 минут без программистов. Ассистент отвечает на вопросы клиентов, принимает заказы и даже помогает с отчётностью. Окупился в первую неделю.",
+                rating: 5
+              }
+            ].map((review, index) => (
+              <Card 
+                key={index}
+                className="border-0 shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardContent className="p-8">
+                  <div className="flex gap-1 mb-6">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Icon key={i} name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                    ))}
+                  </div>
+                  <p className="text-[#6A6A6A] text-lg leading-relaxed mb-8 italic">
+                    "{review.text}"
+                  </p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Icon name="User" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-heading font-bold text-foreground">{review.name}</p>
+                      <p className="text-[#6A6A6A] text-sm">{review.role}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
           <div className="text-center mb-20 animate-fade-in">
             <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
               Тариф
