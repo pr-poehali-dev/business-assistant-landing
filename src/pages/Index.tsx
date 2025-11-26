@@ -11,84 +11,97 @@ import Icon from "@/components/ui/icon";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <section className="relative overflow-hidden px-4 py-20 md:py-32">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <h1 className="font-heading text-4xl md:text-6xl font-bold text-foreground leading-tight">
-                Бизнес-Ассистент 24/7
+      <section className="relative overflow-hidden px-4 py-24 md:py-40">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 items-center">
+            <div className="space-y-8 animate-fade-in">
+              <div className="flex flex-wrap gap-3 mb-4">
+                <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+                  <Icon name="Clock" size={18} className="text-primary" />
+                  <span className="text-sm font-medium text-foreground">Работает 24/7</span>
+                </div>
+                <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+                  <Icon name="TrendingUp" size={18} className="text-primary" />
+                  <span className="text-sm font-medium text-foreground">Поддержка бизнеса</span>
+                </div>
+                <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+                  <Icon name="Zap" size={18} className="text-primary" />
+                  <span className="text-sm font-medium text-foreground">Мгновенная оплата</span>
+                </div>
+              </div>
+              
+              <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground leading-[1.1]">
+                Бизнес-Ассистент 24/7 для автоматизации задач
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                Ваш персональный помощник для автоматизации бизнес-процессов, аналитики и управления задачами. Работает круглосуточно.
+              <p className="text-xl md:text-2xl text-[#6A6A6A] max-w-xl leading-relaxed">
+                Цифровая услуга, которая помогает предпринимателям экономить время и увеличивать прибыль
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="text-lg px-8 py-6 transition-transform hover:scale-105">
-                  Начать бесплатно
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 transition-transform hover:scale-105">
-                  Узнать больше
+              <div className="pt-4">
+                <Button size="lg" className="text-xl px-12 py-8 rounded-[20px] font-semibold transition-all hover:scale-105 hover:shadow-2xl">
+                  Оформить доступ — 490 ₽
                 </Button>
               </div>
             </div>
             
-            <div className="animate-scale-in">
+            <div className="animate-scale-in relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-3xl"></div>
               <img
-                src="https://cdn.poehali.dev/projects/7b3d0ec5-98d0-4c51-a99d-434fef4a779f/files/593b3508-a0f4-4add-a3c2-667cfd7998b2.jpg"
-                alt="Бизнес-Ассистент"
-                className="w-full rounded-2xl shadow-2xl"
+                src="https://cdn.poehali.dev/projects/7b3d0ec5-98d0-4c51-a99d-434fef4a779f/files/4c119b47-1bdc-471c-88a4-e66e6d699a24.jpg"
+                alt="AI Ассистент"
+                className="relative w-full rounded-3xl shadow-2xl"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-20 bg-card">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-              Почему выбирают нас
+      <section className="px-4 py-24 bg-card">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
+              Что входит в сервис
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Умные решения для современного бизнеса
+            <p className="text-[#6A6A6A] text-xl max-w-2xl mx-auto">
+              Всё необходимое для эффективного управления бизнесом
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: "Zap",
-                title: "Быстрая интеграция",
-                description: "Подключение за 5 минут без программирования"
+                icon: "MessageSquare",
+                title: "Персональные сценарии ответов",
+                description: "Готовые шаблоны для общения с клиентами"
               },
               {
-                icon: "Shield",
-                title: "Безопасность",
-                description: "Защита данных на уровне банковских систем"
+                icon: "ShoppingCart",
+                title: "Помощь в продажах",
+                description: "Создание контента и автоматизация воронки продаж"
               },
               {
-                icon: "TrendingUp",
-                title: "Аналитика",
-                description: "Подробные отчёты и прогнозирование"
+                icon: "Settings",
+                title: "Автоматизация процессов",
+                description: "Избавьтесь от рутинных операций"
               },
               {
-                icon: "HeadphonesIcon",
-                title: "Поддержка 24/7",
-                description: "Всегда на связи для решения любых вопросов"
+                icon: "Clock",
+                title: "Работает без выходных",
+                description: "Ассистент доступен 24/7 в любое время"
               }
             ].map((feature, index) => (
               <Card 
                 key={index} 
-                className="text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-fade-in"
+                className="text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 animate-fade-in border-0 shadow-lg"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="pt-12 pb-8">
-                  <div className="mx-auto w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                    <Icon name={feature.icon} className="text-primary" size={32} />
+                <CardContent className="pt-16 pb-12 px-8">
+                  <div className="mx-auto w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center mb-8">
+                    <Icon name={feature.icon} className="text-primary" size={40} />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3">
+                  <h3 className="font-heading text-2xl font-bold mb-4">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-[#6A6A6A] text-lg leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>
@@ -98,33 +111,33 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="px-4 py-20">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
+      <section className="px-4 py-24 relative">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
               Как это работает
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-[#6A6A6A] text-xl max-w-2xl mx-auto">
               Три простых шага до автоматизации
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {[
               {
-                step: "01",
-                title: "Регистрация",
-                description: "Создайте аккаунт за 30 секунд и получите доступ к панели управления"
+                step: "1",
+                title: "Вы оформляете доступ",
+                description: "Быстрая регистрация и мгновенная активация аккаунта за 490 ₽"
               },
               {
-                step: "02",
-                title: "Настройка",
-                description: "Подключите нужные инструменты и настройте бизнес-процессы"
+                step: "2",
+                title: "Подключаете ассистента",
+                description: "Настраиваете под свои задачи без технических знаний"
               },
               {
-                step: "03",
-                title: "Результат",
-                description: "Получайте аналитику и автоматизируйте рутинные задачи"
+                step: "3",
+                title: "Получаете помощь 24/7",
+                description: "Ассистент работает круглосуточно и экономит ваше время"
               }
             ].map((step, index) => (
               <div 
@@ -132,173 +145,208 @@ const Index = () => {
                 className="relative text-center animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="mb-6">
-                  <span className="inline-block font-heading text-6xl font-bold text-primary/20">
+                <div className="mb-8">
+                  <span className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary text-white font-heading text-5xl font-bold">
                     {step.step}
                   </span>
                 </div>
-                <h3 className="font-heading text-2xl font-semibold mb-4">
+                <h3 className="font-heading text-3xl font-bold mb-5">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-[#6A6A6A] text-xl leading-relaxed">
                   {step.description}
                 </p>
+                {index < 2 && (
+                  <div className="hidden md:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary/50 to-transparent"></div>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-20 bg-card">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-              Тарифы
+      <section className="px-4 py-24 bg-card">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
+              Тариф
             </h2>
-            <p className="text-muted-foreground text-lg">
-              Прозрачное ценообразование для вашего бизнеса
+            <p className="text-[#6A6A6A] text-xl">
+              Простое и честное ценообразование
             </p>
           </div>
 
-          <Card className="max-w-md mx-auto shadow-2xl border-2 border-primary/20 animate-scale-in">
-            <CardContent className="p-12 text-center">
-              <div className="mb-8">
-                <h3 className="font-heading text-2xl font-bold mb-4">
-                  Профессиональный
-                </h3>
-                <div className="mb-4">
-                  <span className="font-heading text-6xl font-bold">₽4,990</span>
-                  <span className="text-muted-foreground ml-2">/месяц</span>
-                </div>
-                <p className="text-muted-foreground">
-                  Полный доступ ко всем функциям
-                </p>
+          <Card className="max-w-2xl mx-auto shadow-2xl border-0 animate-scale-in overflow-hidden">
+            <div className="bg-gradient-to-br from-primary to-primary/80 p-8 text-white text-center">
+              <h3 className="font-heading text-3xl font-bold mb-2">
+                Бизнес-Ассистент 24/7
+              </h3>
+              <div className="flex items-baseline justify-center gap-2 mt-6">
+                <span className="font-heading text-7xl font-bold">490 ₽</span>
+                <span className="text-2xl opacity-90">/месяц</span>
               </div>
-
-              <div className="space-y-4 mb-8 text-left">
+            </div>
+            
+            <CardContent className="p-12">
+              <div className="space-y-5 mb-10">
                 {[
-                  "Безлимитные запросы",
-                  "Приоритетная поддержка",
-                  "API доступ",
-                  "Расширенная аналитика",
-                  "Интеграция с CRM"
+                  "Персональные сценарии для клиентов",
+                  "Помощь в продажах и контенте",
+                  "Автоматизация бизнес-процессов",
+                  "Круглосуточная работа без выходных",
+                  "Техподдержка и обновления",
+                  "Готовые шаблоны и инструкции"
                 ].map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <Icon name="Check" className="text-primary flex-shrink-0" size={20} />
-                    <span className="text-foreground">{feature}</span>
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                      <Icon name="Check" className="text-primary" size={18} />
+                    </div>
+                    <span className="text-foreground text-lg leading-relaxed">{feature}</span>
                   </div>
                 ))}
               </div>
 
-              <Button size="lg" className="w-full text-lg py-6">
-                Попробовать 14 дней бесплатно
+              <Button size="lg" className="w-full text-xl py-8 rounded-[18px] font-bold transition-all hover:scale-105 hover:shadow-2xl">
+                Оплатить
               </Button>
+              
+              <div className="flex items-center justify-center gap-6 mt-8 text-sm text-[#6A6A6A]">
+                <div className="flex items-center gap-2">
+                  <Icon name="Shield" size={16} className="text-primary" />
+                  <span>Безопасная оплата</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon name="Lock" size={16} className="text-primary" />
+                  <span>Защита данных</span>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      <section className="px-4 py-20">
-        <div className="container mx-auto max-w-3xl">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
+      <section className="px-4 py-24">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
               Частые вопросы
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-[#6A6A6A] text-xl">
               Ответы на популярные вопросы
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="animate-fade-in">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-lg font-heading hover:no-underline">
-                Как быстро можно начать работу?
+          <Accordion type="single" collapsible className="animate-fade-in space-y-4">
+            <AccordionItem value="item-1" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
+              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
+                Как быстро можно начать работу с ассистентом?
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base">
-                Регистрация занимает менее минуты, и вы сразу получаете доступ к полному функционалу на 14 дней бесплатно. Интеграция с вашими системами занимает 5-10 минут.
+              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
+                Сразу после оплаты! Регистрация занимает 30 секунд, и вы моментально получаете полный доступ к ассистенту. Настройка под ваши задачи займёт не более 5 минут.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-lg font-heading hover:no-underline">
-                Нужны ли технические знания?
+            <AccordionItem value="item-2" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
+              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
+                Что именно делает бизнес-ассистент?
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base">
-                Нет, наш сервис разработан с учётом простоты использования. Интуитивный интерфейс и готовые шаблоны позволяют настроить всё за несколько кликов без программирования.
+              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
+                Ассистент помогает автоматизировать рутинные задачи: отвечает клиентам, создаёт контент для продаж, помогает с бизнес-процессами. Работает круглосуточно без выходных и отпусков.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-lg font-heading hover:no-underline">
-                Безопасны ли мои данные?
+            <AccordionItem value="item-3" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
+              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
+                Нужны ли технические знания для работы?
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base">
-                Безусловно. Мы используем шифрование данных на уровне банков, регулярные резервные копии и соответствуем всем международным стандартам безопасности (ISO 27001, GDPR).
+              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
+                Нет! Интерфейс максимально простой и понятный. Все настройки делаются в несколько кликов. Даже если вы никогда не работали с подобными системами — разберётесь за 5 минут.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4">
-              <AccordionTrigger className="text-lg font-heading hover:no-underline">
+            <AccordionItem value="item-4" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
+              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
                 Можно ли отменить подписку?
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base">
-                Да, вы можете отменить подписку в любой момент без дополнительных комиссий. Доступ сохранится до конца оплаченного периода.
+              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
+                Да, конечно. Подписку можно отменить в любой момент в личном кабинете. Никаких штрафов или скрытых комиссий. Доступ будет работать до конца оплаченного периода.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-5">
-              <AccordionTrigger className="text-lg font-heading hover:no-underline">
-                Какая поддержка предоставляется?
+            <AccordionItem value="item-5" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
+              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
+                Безопасно ли передавать данные о бизнесе?
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base">
-                Мы предоставляем круглосуточную поддержку через чат, email и телефон. Среднее время ответа — 15 минут. Также доступна база знаний и видео-уроки.
+              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
+                Абсолютно безопасно. Мы используем шифрование на уровне банков, все данные хранятся на защищённых серверах. Соответствуем международным стандартам безопасности.
+              </AccordionContent>
+            </AccordionItem>
+            
+            <AccordionItem value="item-6" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
+              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
+                Какие способы оплаты доступны?
+              </AccordionTrigger>
+              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
+                Принимаем банковские карты (Visa, Mastercard, МИР), электронные кошельки и банковские переводы. Оплата обрабатывается мгновенно, доступ открывается автоматически.
+              </AccordionContent>
+            </AccordionItem>
+            
+            <AccordionItem value="item-7" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
+              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
+                Есть ли техподдержка?
+              </AccordionTrigger>
+              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
+                Да! Наша поддержка работает 24/7 и всегда готова помочь. Ответим на вопросы в течение 15 минут через чат, email или телефон. Также есть подробная база знаний и видео-инструкции.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
       </section>
 
-      <footer className="bg-foreground text-background px-4 py-12">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="font-heading text-xl font-bold mb-4">
+      <footer className="bg-[#1E1E1E] text-white px-4 py-16">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div className="md:col-span-2">
+              <h3 className="font-heading text-3xl font-bold mb-4">
                 Бизнес-Ассистент 24/7
               </h3>
-              <p className="text-background/70">
-                Умный помощник для вашего бизнеса
+              <p className="text-white/70 text-lg mb-6 max-w-md">
+                Умный цифровой помощник для автоматизации бизнеса и увеличения прибыли
               </p>
+              <div className="flex items-center gap-3 text-white/70">
+                <Icon name="Mail" size={20} />
+                <a href="mailto:support@bizassist.ru" className="hover:text-white transition">
+                  support@bizassist.ru
+                </a>
+              </div>
             </div>
 
             <div>
-              <h4 className="font-heading font-semibold mb-4">Продукт</h4>
-              <ul className="space-y-2 text-background/70">
-                <li><a href="#" className="hover:text-background transition">Возможности</a></li>
-                <li><a href="#" className="hover:text-background transition">Тарифы</a></li>
-                <li><a href="#" className="hover:text-background transition">Интеграции</a></li>
+              <h4 className="font-heading font-bold text-lg mb-4">Информация</h4>
+              <ul className="space-y-3 text-white/70 text-lg">
+                <li><a href="#" className="hover:text-white transition">Политика конфиденциальности</a></li>
+                <li><a href="#" className="hover:text-white transition">Публичная оферта</a></li>
+                <li><a href="#" className="hover:text-white transition">Условия использования</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-heading font-semibold mb-4">Компания</h4>
-              <ul className="space-y-2 text-background/70">
-                <li><a href="#" className="hover:text-background transition">О нас</a></li>
-                <li><a href="#" className="hover:text-background transition">Блог</a></li>
-                <li><a href="#" className="hover:text-background transition">Карьера</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-heading font-semibold mb-4">Поддержка</h4>
-              <ul className="space-y-2 text-background/70">
-                <li><a href="#" className="hover:text-background transition">Справка</a></li>
-                <li><a href="#" className="hover:text-background transition">Контакты</a></li>
-                <li><a href="#" className="hover:text-background transition">API</a></li>
-              </ul>
+              <h4 className="font-heading font-bold text-lg mb-4">Социальные сети</h4>
+              <div className="flex gap-4">
+                <a href="#" className="w-12 h-12 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition">
+                  <Icon name="Send" size={20} />
+                </a>
+                <a href="#" className="w-12 h-12 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition">
+                  <Icon name="MessageCircle" size={20} />
+                </a>
+                <a href="#" className="w-12 h-12 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition">
+                  <Icon name="Youtube" size={20} />
+                </a>
+              </div>
             </div>
           </div>
 
-          <div className="border-t border-background/20 pt-8 text-center text-background/70">
+          <div className="border-t border-white/10 pt-8 text-center text-white/50 text-lg">
             <p>&copy; 2024 Бизнес-Ассистент 24/7. Все права защищены.</p>
           </div>
         </div>
