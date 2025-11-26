@@ -10,98 +10,102 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <section className="relative overflow-hidden px-4 py-24 md:py-40">
-        <div className="container mx-auto max-w-7xl">
+    <div className="min-h-screen">
+      <section className="relative overflow-hidden px-4 py-32 md:py-48">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-float"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-[120px] animate-float" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 items-center">
-            <div className="space-y-8 animate-fade-in">
-              <div className="flex flex-wrap gap-3 mb-4">
-                <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-                  <Icon name="Clock" size={18} className="text-primary" />
-                  <span className="text-sm font-medium text-foreground">Работает 24/7</span>
-                </div>
-                <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-                  <Icon name="TrendingUp" size={18} className="text-primary" />
-                  <span className="text-sm font-medium text-foreground">Поддержка бизнеса</span>
-                </div>
-                <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-                  <Icon name="Zap" size={18} className="text-primary" />
-                  <span className="text-sm font-medium text-foreground">Мгновенная оплата</span>
-                </div>
+            <div className="space-y-10 animate-fade-in">
+              <div className="inline-flex items-center gap-3 glass-card px-6 py-3 rounded-full">
+                <div className="w-2 h-2 bg-gold rounded-full animate-glow"></div>
+                <span className="text-gold text-sm font-semibold tracking-wider uppercase">Premium Digital Assistant</span>
               </div>
               
-              <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground leading-[1.1]">
-                Бизнес-Ассистент 24/7 для автоматизации задач
+              <h1 className="font-heading text-6xl md:text-8xl font-bold text-foreground leading-[1.05]">
+                Бизнес-Ассистент{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-gold glow-text">
+                  24/7
+                </span>
               </h1>
-              <p className="text-xl md:text-2xl text-[#6A6A6A] max-w-xl leading-relaxed">
-                Цифровая услуга, которая помогает предпринимателям экономить время и увеличивать прибыль
+              
+              <p className="text-xl md:text-2xl text-foreground/70 max-w-xl leading-relaxed">
+                Премиальная цифровая услуга для автоматизации бизнеса. Работает круглосуточно, экономит время, увеличивает прибыль
               </p>
-              <div className="pt-4">
-                <Button size="lg" className="text-xl px-12 py-8 rounded-[20px] font-semibold transition-all hover:scale-105 hover:shadow-2xl">
-                  Оформить доступ — 490 ₽
+              
+              <div className="pt-6">
+                <Button 
+                  size="lg" 
+                  className="text-xl px-14 py-9 rounded-[20px] font-bold bg-gradient-to-r from-gold to-gold-dark hover:from-gold-light hover:to-gold transition-all hover:scale-105 glow-gold text-black"
+                >
+                  Получить доступ — 490 ₽
                 </Button>
               </div>
             </div>
             
             <div className="animate-scale-in relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-3xl"></div>
+              <div className="absolute -inset-8 bg-gradient-to-r from-primary/30 to-gold/30 rounded-full blur-[80px] animate-glow"></div>
               <img
-                src="https://cdn.poehali.dev/projects/7b3d0ec5-98d0-4c51-a99d-434fef4a779f/files/4c119b47-1bdc-471c-88a4-e66e6d699a24.jpg"
-                alt="AI Ассистент"
-                className="relative w-full rounded-3xl shadow-2xl"
+                src="https://cdn.poehali.dev/projects/7b3d0ec5-98d0-4c51-a99d-434fef4a779f/files/f08c7f0b-d57f-4e33-a8d2-d83c0d9b656f.jpg"
+                alt="AI Ассистент 3D"
+                className="relative w-full rounded-[30px] animate-float"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-24 bg-card">
+      <section className="px-4 py-32 relative">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-              Что входит в сервис
+          <div className="text-center mb-24 animate-fade-in">
+            <h2 className="font-heading text-5xl md:text-7xl font-bold mb-8">
+              Преимущества
             </h2>
-            <p className="text-[#6A6A6A] text-xl max-w-2xl mx-auto">
-              Всё необходимое для эффективного управления бизнесом
+            <p className="text-foreground/60 text-2xl max-w-2xl mx-auto">
+              Всё необходимое для премиального управления бизнесом
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: "MessageSquare",
-                title: "Персональные сценарии ответов",
-                description: "Готовые шаблоны для общения с клиентами"
+                icon: "Sparkles",
+                title: "Персональные сценарии",
+                description: "Умные шаблоны ответов для каждого клиента"
               },
               {
-                icon: "ShoppingCart",
-                title: "Помощь в продажах",
-                description: "Создание контента и автоматизация воронки продаж"
+                icon: "TrendingUp",
+                title: "Рост продаж",
+                description: "Автоматизация воронки и создание контента"
               },
               {
-                icon: "Settings",
-                title: "Автоматизация процессов",
-                description: "Избавьтесь от рутинных операций"
+                icon: "Settings2",
+                title: "Умная автоматизация",
+                description: "Избавление от рутинных операций"
               },
               {
-                icon: "Clock",
-                title: "Работает без выходных",
-                description: "Ассистент доступен 24/7 в любое время"
+                icon: "Zap",
+                title: "24/7 доступность",
+                description: "Работает без выходных и праздников"
               }
             ].map((feature, index) => (
               <Card 
                 key={index} 
-                className="text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 animate-fade-in border-0 shadow-lg"
+                className="glass-card glass-card-hover text-center border-0 animate-fade-in rounded-[20px]"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="pt-16 pb-12 px-8">
-                  <div className="mx-auto w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center mb-8">
-                    <Icon name={feature.icon} className="text-primary" size={40} />
+                  <div className="mx-auto w-24 h-24 glass-card rounded-[24px] flex items-center justify-center mb-10 relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-gold/20 rounded-[24px]"></div>
+                    <Icon name={feature.icon} className="text-gold relative z-10" size={44} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading text-2xl font-bold mb-4">
+                  <h3 className="font-heading text-2xl font-bold mb-5 text-foreground">
                     {feature.title}
                   </h3>
-                  <p className="text-[#6A6A6A] text-lg leading-relaxed">
+                  <p className="text-foreground/60 text-lg leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>
@@ -111,171 +115,136 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="px-4 py-24 relative">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
+      <section className="px-4 py-32 relative">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-24 animate-fade-in">
+            <h2 className="font-heading text-5xl md:text-7xl font-bold mb-8">
               Как это работает
             </h2>
-            <p className="text-[#6A6A6A] text-xl max-w-2xl mx-auto">
+            <p className="text-foreground/60 text-2xl">
               Три простых шага до автоматизации
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            {[
-              {
-                step: "1",
-                title: "Вы оформляете доступ",
-                description: "Быстрая регистрация и мгновенная активация аккаунта за 490 ₽"
-              },
-              {
-                step: "2",
-                title: "Подключаете ассистента",
-                description: "Настраиваете под свои задачи без технических знаний"
-              },
-              {
-                step: "3",
-                title: "Получаете помощь 24/7",
-                description: "Ассистент работает круглосуточно и экономит ваше время"
-              }
-            ].map((step, index) => (
-              <div 
-                key={index} 
-                className="relative text-center animate-fade-in"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <div className="mb-8">
-                  <span className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary text-white font-heading text-5xl font-bold">
-                    {step.step}
-                  </span>
+          <div className="relative">
+            <div className="absolute top-[15%] left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-transparent via-gold/40 to-transparent hidden lg:block"></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+              {[
+                {
+                  step: "1",
+                  icon: "CreditCard",
+                  title: "Оформляете доступ",
+                  description: "Мгновенная активация после оплаты. Простая регистрация за 30 секунд"
+                },
+                {
+                  step: "2",
+                  icon: "Settings",
+                  title: "Настраиваете ассистента",
+                  description: "Интуитивная настройка под ваши задачи без технических знаний"
+                },
+                {
+                  step: "3",
+                  icon: "Rocket",
+                  title: "Получаете результат",
+                  description: "Ассистент работает 24/7 и автоматизирует ваш бизнес"
+                }
+              ].map((step, index) => (
+                <div 
+                  key={index} 
+                  className="relative text-center animate-fade-in"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <div className="mb-10 relative z-10">
+                    <div className="inline-flex items-center justify-center w-32 h-32 rounded-full glass-card relative group">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-gold/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <Icon name={step.icon} className="text-gold relative z-10" size={56} strokeWidth={1.5} />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-12 h-12 rounded-full bg-gold text-black flex items-center justify-center font-heading text-2xl font-bold glow-gold">
+                      {step.step}
+                    </div>
+                  </div>
+                  
+                  <h3 className="font-heading text-3xl font-bold mb-6 text-foreground">
+                    {step.title}
+                  </h3>
+                  <p className="text-foreground/60 text-xl leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
-                <h3 className="font-heading text-3xl font-bold mb-5">
-                  {step.title}
-                </h3>
-                <p className="text-[#6A6A6A] text-xl leading-relaxed">
-                  {step.description}
-                </p>
-                {index < 2 && (
-                  <div className="hidden md:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary/50 to-transparent"></div>
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-24 bg-card">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-              Отзывы клиентов
+      <section className="px-4 py-32 relative">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[150px]"></div>
+        </div>
+
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="text-center mb-24 animate-fade-in">
+            <h2 className="font-heading text-5xl md:text-7xl font-bold mb-8">
+              Премиальный тариф
             </h2>
-            <p className="text-[#6A6A6A] text-xl">
-              Что говорят те, кто уже использует ассистента
+            <p className="text-foreground/60 text-2xl">
+              Честное ценообразование без скрытых платежей
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
-            {[
-              {
-                name: "Алексей Морозов",
-                role: "Владелец интернет-магазина",
-                text: "Ассистент полностью автоматизировал общение с клиентами. Теперь не теряю заявки по ночам, а продажи выросли на 40%. За 490₽ это просто находка!",
-                rating: 5
-              },
-              {
-                name: "Мария Соколова",
-                role: "Руководитель SMM-агентства",
-                text: "Создание контента стало в разы быстрее. Ассистент помогает с текстами, идеями и планированием. Экономлю минимум 10 часов в неделю. Рекомендую всем!",
-                rating: 5
-              },
-              {
-                name: "Дмитрий Волков",
-                role: "Владелец сети кофеен",
-                text: "Настроил за 5 минут без программистов. Ассистент отвечает на вопросы клиентов, принимает заказы и даже помогает с отчётностью. Окупился в первую неделю.",
-                rating: 5
-              }
-            ].map((review, index) => (
-              <Card 
-                key={index}
-                className="border-0 shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="p-8">
-                  <div className="flex gap-1 mb-6">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                    ))}
-                  </div>
-                  <p className="text-[#6A6A6A] text-lg leading-relaxed mb-8 italic">
-                    "{review.text}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Icon name="User" size={24} className="text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-heading font-bold text-foreground">{review.name}</p>
-                      <p className="text-[#6A6A6A] text-sm">{review.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-              Тариф
-            </h2>
-            <p className="text-[#6A6A6A] text-xl">
-              Простое и честное ценообразование
-            </p>
-          </div>
-
-          <Card className="max-w-2xl mx-auto shadow-2xl border-0 animate-scale-in overflow-hidden">
-            <div className="bg-gradient-to-br from-primary to-primary/80 p-8 text-white text-center">
-              <h3 className="font-heading text-3xl font-bold mb-2">
-                Бизнес-Ассистент 24/7
-              </h3>
-              <div className="flex items-baseline justify-center gap-2 mt-6">
-                <span className="font-heading text-7xl font-bold">490 ₽</span>
-                <span className="text-2xl opacity-90">/месяц</span>
+          <Card className="glass-card border-0 animate-scale-in overflow-hidden rounded-[24px] shadow-2xl">
+            <div className="relative p-14 text-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-gold/10 to-transparent"></div>
+              
+              <div className="relative z-10">
+                <h3 className="font-heading text-4xl font-bold mb-4 text-foreground">
+                  Бизнес-Ассистент 24/7
+                </h3>
+                <p className="text-gold text-lg mb-8 font-medium">PREMIUM EDITION</p>
+                
+                <div className="flex items-baseline justify-center gap-3">
+                  <span className="font-heading text-8xl font-bold text-gold glow-text">490 ₽</span>
+                  <span className="text-3xl text-foreground/60">/месяц</span>
+                </div>
               </div>
             </div>
             
-            <CardContent className="p-12">
-              <div className="space-y-5 mb-10">
+            <CardContent className="p-14">
+              <div className="space-y-6 mb-12">
                 {[
-                  "Персональные сценарии для клиентов",
-                  "Помощь в продажах и контенте",
-                  "Автоматизация бизнес-процессов",
+                  "Персональные AI-сценарии для клиентов",
+                  "Автоматизация продаж и маркетинга",
+                  "Умные бизнес-процессы",
                   "Круглосуточная работа без выходных",
-                  "Техподдержка и обновления",
-                  "Готовые шаблоны и инструкции"
+                  "Приоритетная техподдержка 24/7",
+                  "Готовые премиум-шаблоны",
+                  "Регулярные обновления и улучшения"
                 ].map((feature, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
-                      <Icon name="Check" className="text-primary" size={18} />
+                  <div key={index} className="flex items-start gap-5 group">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full glass-card flex items-center justify-center mt-1 group-hover:bg-gold/20 transition-colors">
+                      <Icon name="Check" className="text-gold" size={18} strokeWidth={3} />
                     </div>
-                    <span className="text-foreground text-lg leading-relaxed">{feature}</span>
+                    <span className="text-foreground/90 text-xl leading-relaxed">{feature}</span>
                   </div>
                 ))}
               </div>
 
-              <Button size="lg" className="w-full text-xl py-8 rounded-[18px] font-bold transition-all hover:scale-105 hover:shadow-2xl">
-                Оплатить
+              <Button 
+                size="lg" 
+                className="w-full text-2xl py-10 rounded-[20px] font-bold bg-gradient-to-r from-gold to-gold-dark hover:from-gold-light hover:to-gold transition-all hover:scale-105 glow-gold text-black"
+              >
+                Оплатить сейчас
               </Button>
               
-              <div className="flex items-center justify-center gap-6 mt-8 text-sm text-[#6A6A6A]">
-                <div className="flex items-center gap-2">
-                  <Icon name="Shield" size={16} className="text-primary" />
-                  <span>Безопасная оплата</span>
+              <div className="flex items-center justify-center gap-10 mt-10 text-sm text-foreground/50">
+                <div className="flex items-center gap-3">
+                  <Icon name="Shield" size={20} className="text-gold" />
+                  <span>Защищённая оплата</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Icon name="Lock" size={16} className="text-primary" />
-                  <span>Защита данных</span>
+                <div className="flex items-center gap-3">
+                  <Icon name="Lock" size={20} className="text-gold" />
+                  <span>Шифрование данных</span>
                 </div>
               </div>
             </CardContent>
@@ -283,128 +252,103 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="px-4 py-24">
+      <section className="px-4 py-32">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6">
+          <div className="text-center mb-24 animate-fade-in">
+            <h2 className="font-heading text-5xl md:text-7xl font-bold mb-8">
               Частые вопросы
             </h2>
-            <p className="text-[#6A6A6A] text-xl">
+            <p className="text-foreground/60 text-2xl">
               Ответы на популярные вопросы
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="animate-fade-in space-y-4">
-            <AccordionItem value="item-1" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
-              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
-                Как быстро можно начать работу с ассистентом?
-              </AccordionTrigger>
-              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
-                Сразу после оплаты! Регистрация занимает 30 секунд, и вы моментально получаете полный доступ к ассистенту. Настройка под ваши задачи займёт не более 5 минут.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
-              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
-                Что именно делает бизнес-ассистент?
-              </AccordionTrigger>
-              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
-                Ассистент помогает автоматизировать рутинные задачи: отвечает клиентам, создаёт контент для продаж, помогает с бизнес-процессами. Работает круглосуточно без выходных и отпусков.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
-              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
-                Нужны ли технические знания для работы?
-              </AccordionTrigger>
-              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
-                Нет! Интерфейс максимально простой и понятный. Все настройки делаются в несколько кликов. Даже если вы никогда не работали с подобными системами — разберётесь за 5 минут.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-4" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
-              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
-                Можно ли отменить подписку?
-              </AccordionTrigger>
-              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
-                Да, конечно. Подписку можно отменить в любой момент в личном кабинете. Никаких штрафов или скрытых комиссий. Доступ будет работать до конца оплаченного периода.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-5" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
-              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
-                Безопасно ли передавать данные о бизнесе?
-              </AccordionTrigger>
-              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
-                Абсолютно безопасно. Мы используем шифрование на уровне банков, все данные хранятся на защищённых серверах. Соответствуем международным стандартам безопасности.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-6" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
-              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
-                Какие способы оплаты доступны?
-              </AccordionTrigger>
-              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
-                Принимаем банковские карты (Visa, Mastercard, МИР), электронные кошельки и банковские переводы. Оплата обрабатывается мгновенно, доступ открывается автоматически.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-7" className="border-0 bg-card rounded-[18px] px-8 shadow-lg">
-              <AccordionTrigger className="text-xl font-heading hover:no-underline py-8">
-                Есть ли техподдержка?
-              </AccordionTrigger>
-              <AccordionContent className="text-[#6A6A6A] text-lg leading-relaxed pb-8">
-                Да! Наша поддержка работает 24/7 и всегда готова помочь. Ответим на вопросы в течение 15 минут через чат, email или телефон. Также есть подробная база знаний и видео-инструкции.
-              </AccordionContent>
-            </AccordionItem>
+          <Accordion type="single" collapsible className="animate-fade-in space-y-6">
+            {[
+              {
+                q: "Как быстро можно начать работу?",
+                a: "Сразу после оплаты! Регистрация занимает 30 секунд, и вы моментально получаете полный доступ к ассистенту. Настройка под ваши задачи займёт не более 5 минут."
+              },
+              {
+                q: "Что именно делает бизнес-ассистент?",
+                a: "Ассистент помогает автоматизировать рутинные задачи: отвечает клиентам, создаёт контент для продаж, помогает с бизнес-процессами. Работает круглосуточно без выходных и отпусков."
+              },
+              {
+                q: "Нужны ли технические знания?",
+                a: "Нет! Интерфейс максимально простой и понятный. Все настройки делаются в несколько кликов. Даже если вы никогда не работали с подобными системами — разберётесь за 5 минут."
+              },
+              {
+                q: "Можно ли отменить подписку?",
+                a: "Да, конечно. Подписку можно отменить в любой момент в личном кабинете. Никаких штрафов или скрытых комиссий. Доступ будет работать до конца оплаченного периода."
+              },
+              {
+                q: "Безопасно ли передавать данные?",
+                a: "Абсолютно безопасно. Мы используем шифрование на уровне банков, все данные хранятся на защищённых серверах. Соответствуем международным стандартам безопасности."
+              }
+            ].map((item, index) => (
+              <AccordionItem 
+                key={index}
+                value={`item-${index}`} 
+                className="glass-card border-0 rounded-[20px] px-10 group hover:border-gold/30"
+              >
+                <AccordionTrigger className="text-2xl font-heading hover:no-underline py-10 text-foreground group-hover:text-gold transition-colors">
+                  {item.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-xl leading-relaxed pb-10">
+                  {item.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
       </section>
 
-      <footer className="bg-[#1E1E1E] text-white px-4 py-16">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <footer className="relative px-4 py-20 border-t border-white/5">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
+        
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-16">
             <div className="md:col-span-2">
-              <h3 className="font-heading text-3xl font-bold mb-4">
+              <h3 className="font-heading text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-primary to-gold">
                 Бизнес-Ассистент 24/7
               </h3>
-              <p className="text-white/70 text-lg mb-6 max-w-md">
-                Умный цифровой помощник для автоматизации бизнеса и увеличения прибыли
+              <p className="text-foreground/60 text-xl mb-8 max-w-md leading-relaxed">
+                Премиальный цифровой помощник для автоматизации бизнеса нового поколения
               </p>
-              <div className="flex items-center gap-3 text-white/70">
-                <Icon name="Mail" size={20} />
-                <a href="mailto:support@bizassist.ru" className="hover:text-white transition">
+              <div className="flex items-center gap-4 text-foreground/70">
+                <Icon name="Mail" size={24} className="text-gold" />
+                <a href="mailto:support@bizassist.ru" className="text-xl hover:text-gold transition">
                   support@bizassist.ru
                 </a>
               </div>
             </div>
 
             <div>
-              <h4 className="font-heading font-bold text-lg mb-4">Информация</h4>
-              <ul className="space-y-3 text-white/70 text-lg">
-                <li><a href="#" className="hover:text-white transition">Политика конфиденциальности</a></li>
-                <li><a href="#" className="hover:text-white transition">Публичная оферта</a></li>
-                <li><a href="#" className="hover:text-white transition">Условия использования</a></li>
+              <h4 className="font-heading font-bold text-xl mb-6 text-foreground">Документы</h4>
+              <ul className="space-y-4 text-foreground/60 text-lg">
+                <li><a href="#" className="hover:text-gold transition">Политика конфиденциальности</a></li>
+                <li><a href="#" className="hover:text-gold transition">Публичная оферта</a></li>
+                <li><a href="#" className="hover:text-gold transition">Условия использования</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-heading font-bold text-lg mb-4">Социальные сети</h4>
-              <div className="flex gap-4">
-                <a href="#" className="w-12 h-12 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition">
-                  <Icon name="Send" size={20} />
-                </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition">
-                  <Icon name="MessageCircle" size={20} />
-                </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition">
-                  <Icon name="Youtube" size={20} />
-                </a>
+              <h4 className="font-heading font-bold text-xl mb-6 text-foreground">Соцсети</h4>
+              <div className="flex gap-5">
+                {['Send', 'MessageCircle', 'Youtube'].map((icon, i) => (
+                  <a 
+                    key={i}
+                    href="#" 
+                    className="w-14 h-14 rounded-full glass-card hover:bg-gold/20 flex items-center justify-center transition group"
+                  >
+                    <Icon name={icon} size={24} className="text-gold" />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="border-t border-white/10 pt-8 text-center text-white/50 text-lg">
+          <div className="border-t border-white/5 pt-10 text-center text-foreground/40 text-lg">
             <p>&copy; 2024 Бизнес-Ассистент 24/7. Все права защищены.</p>
           </div>
         </div>
